@@ -67,7 +67,7 @@ function roomsGenerator(amount, k1, k2, k3, prevRoom) {
   roomsGenerator(amount - 1, k1, k2, k3, room); //recursion (зробити тута рандомну коробку)
 }
 
-//looks for rooms on surrounding coordinates to prevent generating "the same" room twice (добавити кудась у начало генератора)
+//looks for rooms on surrounding coordinates to prevent generating "the same" room twice (добавити кудась у начало генератора коробок)
 function checkAround(room) {
   let arr = roomsArray;
 
