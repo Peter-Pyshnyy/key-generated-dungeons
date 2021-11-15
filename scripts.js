@@ -78,7 +78,11 @@ function checkAround(room) {
       (e[1] === room.pos[1] && e[0] <= room.pos[0] + 1 && e[0] >= room.pos[0] - 1) //Y axis
     );
   });
-  return filteredArr;
+
+  filteredArr.forEach((e) => {
+    let neighbour = rooms.get(`${e[0]}${e[1]}`);
+  });
+  // return filteredArr;
 }
 
 roomsGenerator(10, 5, 2, 8, new Room([0, 0]));
@@ -86,4 +90,7 @@ roomsGenerator(10, 5, 2, 8, new Room([0, 0]));
 console.log(rooms);
 console.log(roomsArray);
 
-console.log(checkAround(rooms.get("4-1")));
+let fArr = checkAround(rooms.get("4-1"));
+fArr.forEach((e) => {
+  console.log(rooms.get(`${e[0]}${e[1]}`)); //get the surrounding rooms
+});
