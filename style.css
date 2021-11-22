@@ -1,0 +1,32 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  align-items: center;
+}
+
+.dungeon {
+  height: 70vh;
+  width: auto;
+}
+
+.square {
+  width: 30px;
+  height: 30px;
+  background: black;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.connection {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: red;
+}

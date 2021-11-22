@@ -62,10 +62,7 @@ function roomsGenerator(k1, k2, k3, k4, sourceRoom) {
     sourceRoom[sourceDirection] = room; //direrction as the key, new room as argument
 
     let direction = slots[slots.indexOf(sourceDirection) + 2]; //gets the opposite slot
-    let newDirection = room.freeSlots.splice(
-      room.freeSlots.indexOf(direction),
-      1
-    ); //lock the oppocite slot in the new room
+    let newDirection = room.freeSlots.splice(room.freeSlots.indexOf(direction), 1); //lock the oppocite slot in the new room
     room.takenSlots.push(newDirection[0]);
     room[direction] = sourceRoom; //sourceRoom as an argument, direrction as the key
     room.newPos(direction, sourceRoom.pos);

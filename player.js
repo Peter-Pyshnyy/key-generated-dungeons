@@ -1,4 +1,4 @@
-import { rooms } from "./scriptsTwo.js";
+import { rooms } from "./scripts.js";
 const btn = document.getElementById("btn");
 const input = document.getElementById("input");
 const content = document.getElementById("content");

@@ -1,4 +1,4 @@
-import { rooms } from "./scriptsTwo.js";
+import { rooms } from "./scripts.js";
 const dungeon = document.getElementById("dungeon");
 const directionsMap = new Map();
 const contentMap = new Map();
@@ -16,6 +16,8 @@ contentMap.set("puzzle", "purple");
 contentMap.set("shop", "yellow");
 contentMap.set("boss", "green");
 
+console.log(rooms);
+
 function drawRoom(room) {
   if (room.pos[2] != 0) return;
   let roomSquare = document.createElement("div");
@@ -31,6 +33,7 @@ function drawRoom(room) {
   room.takenSlots.forEach((e) => {
     let connection = document.createElement("div");
     connection.classList.add("connection");
+    console.log(directionsMap.get(e)[0]);
     connection.style.left = directionsMap.get(e)[0];
     connection.style.top = directionsMap.get(e)[1];
     roomSquare.append(connection);
@@ -40,5 +43,3 @@ function drawRoom(room) {
 rooms.forEach((e) => {
   drawRoom(e);
 });
-
-console.log(rooms);
